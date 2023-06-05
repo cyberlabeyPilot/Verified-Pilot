@@ -1,1 +1,48 @@
-
+{
+    "id": "did:web:brave-beach-00aac9d10.3.azurestaticapps.net",
+    "@context": [
+        "https://www.w3.org/ns/did/v1",
+        {
+            "@base": "did:web:brave-beach-00aac9d10.3.azurestaticapps.net"
+        }
+    ],
+    "service": [
+        {
+            "id": "#linkeddomains",
+            "type": "LinkedDomains",
+            "serviceEndpoint": {
+                "origins": [
+                    "https://brave-beach-00aac9d10.3.azurestaticapps.net/"
+                ]
+            }
+        },
+        {
+            "id": "#hub",
+            "type": "IdentityHub",
+            "serviceEndpoint": {
+                "instances": [
+                    "https://hub.did.msidentity.com/v1.0/8e016745-eddb-4c6a-8f33-fbcb1f064d93"
+                ]
+            }
+        }
+    ],
+    "verificationMethod": [
+        {
+            "id": "#eb534f880a8f4260bea4090ee31b6dcdvcSigningKey-f4b0e",
+            "controller": "did:web:brave-beach-00aac9d10.3.azurestaticapps.net",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "publicKeyJwk": {
+                "crv": "secp256k1",
+                "kty": "EC",
+                "x": "jBnvsGfC-r6TFwn4OE9qsdxHIROe5YqwkkhR1i_aYc0",
+                "y": "CiE-pqXkEduvJoY40ouuK5DMOVW4gCCUH6P7GzQZBCA"
+            }
+        }
+    ],
+    "authentication": [
+        "#eb534f880a8f4260bea4090ee31b6dcdvcSigningKey-f4b0e"
+    ],
+    "assertionMethod": [
+        "#eb534f880a8f4260bea4090ee31b6dcdvcSigningKey-f4b0e"
+    ]
+}
